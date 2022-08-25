@@ -1,0 +1,181 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Heebo:wght@300;400;500;600;700&family=Dancing+Script&display=swap');
+
+:root {
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    --color-green-mist: rgba(204, 213, 174, 1);
+    --color-cornsilk: rgba(254, 250, 224, 1);
+    --color-fawn: rgba(212, 163, 115, 1);
+    --color-dark: rgba(55, 43, 43, 1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    color: var(--color-dark);
+    background-color: var(--color-cornsilk);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bg-fawn {
+    background: var(--color-fawn);
+}
+
+.bg-green-mist {
+    background: var(--color-green-mist);
+}
+
+main {
+    display: flex;
+}
+
+.home {
+    height: calc(100vh - 64px);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-left {
+    display: flex;
+    justify-content: center;
+}
+
+.home-left--image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    padding: 48px 8px 8px 8px;
+}
+
+.home-right {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-right--heading {
+    width: 100%;
+    text-align: center;
+}
+
+.home-heading--quotes {
+    font-family: 'Dancing Script', cursive;
+}
+
+.home-heading--title {
+    margin: 0;
+    padding-top: 8px;
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--color-cornsilk);
+}
+
+.home-heading--title span {
+    color: var(--color-green-mist);
+    font-weight: bolder;
+    padding-left: 3px;
+}
+
+.home-heading--subtitle {
+    margin: 0;
+    font-weight: 300;
+}
+
+.home-right--menu {
+    padding-top: 24px;
+}
+
+.home-right--menu a {
+    text-decoration: none;
+}
+
+.home-right--menu button {
+    margin: 8px;
+    padding: 8px 16px;
+    background: none;
+    border: 2px solid var(--color-cornsilk);
+    border-radius: 10px;
+    color: var(--color-cornsilk);
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all .5s ease-in-out;
+}
+
+.home-right--menu button:hover {
+    transform: translateY(6px);
+    background: rgba(250, 237, 205, .2);
+}
+
+.icon-menu {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+footer {
+    height: 64px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-cornsilk);
+}
+
+.footer-social {
+    display: flex;
+}
+
+.footer-social a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 4px;
+}
+
+.footer-copyright span {
+    color: var(--color-dark);
+}
+
+/***  DESKTOP (Screen up to 768px)  ***/
+@media only screen and (min-width: 768px) {
+    .home {
+        flex-direction: row;
+    }
+
+    .home-left--image {
+        padding: 0;
+    }
+
+    .home-right {
+        padding: 0 24px;
+    }
+
+    .home-heading--quotes {
+        font-size: 1.5rem;
+    }
+
+    .home-heading--title {
+        font-size: 2.5rem;
+    }
+}
